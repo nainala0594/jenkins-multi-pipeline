@@ -20,7 +20,7 @@ pipeline{
     stage('deploy'){
       steps{
         sshagent(['deployer_1']) {
-          sh "scp -o StrictHostKeyChecking=no target/mahaLogin-1.0.war tomcat9@:35.175.242.143:/opt/tomcat8/webapps"
+          sh "scp -o StrictHostKeyChecking=no target/mahaLogin-1.0.war tomcat9@35.175.242.143:/opt/tomcat8/webapps"
         }
       }
     }
